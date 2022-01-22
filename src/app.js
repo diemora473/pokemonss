@@ -3,11 +3,18 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const routes = require('./routes/index.js');
+const cors = require('cors')
+
 
 require('./db.js');
 
 const server = express();
-const port = process.env.PORT || 3001 || 'https://git.heroku.com/pokemonjs-new.git'
+const port = process.env.PORT || 3001 || 'https://git.heroku.com/pokemonjs-new.git';
+const corsOptions = {
+  origin: 'https://pokemon-40d1c.web.app',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+
 
 server.name = 'API';
 
