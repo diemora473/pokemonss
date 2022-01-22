@@ -8,18 +8,11 @@ const getAllPk = require('../controllers/getPkAll')
 const createPokemon = require('../controllers/createPokemon')
 const cors = require('cors')
 
-const corsOptions = {
-    supportcors = verdadero,
-    origin: 'https://pokemon-40d1c.web.app',
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
 
 //GET POKEMONS FROM API
-router.get('/api', cors(corsOptions), async (req, res, next) => {
+router.get('/api', async (req, res, next) => {
     try {
         const result = await getPokemonsApi()
-        res.json({ msg: 'This is CORS-enabled for only example.com.' })
-        return res.status(200).json(result)
     } catch (err) {
         next(err)
     }
