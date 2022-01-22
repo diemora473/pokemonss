@@ -9,6 +9,7 @@ const createPokemon = require('../controllers/createPokemon')
 const cors = require('cors')
 
 const corsOptions = {
+    supportcors = verdadero,
     origin: 'https://pokemon-40d1c.web.app',
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
