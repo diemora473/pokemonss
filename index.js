@@ -41,7 +41,7 @@ const addTypeToDb = async () => {
 
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
-  server.listen(3001, () => {
+  server.listen(`https://pokemon-40d1c.web.app`, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });
 });
