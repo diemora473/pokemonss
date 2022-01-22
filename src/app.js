@@ -9,11 +9,8 @@ const cors = require('cors')
 require('./db.js');
 
 const server = express();
+server.use(cors())
 const port = process.env.PORT || 3001 || 'https://git.heroku.com/pokemonjs-new.git';
-const corsOptions = {
-  origin: 'https://pokemon-40d1c.web.app',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
 
 
 server.name = 'API';
@@ -24,7 +21,7 @@ server.use(cookieParser());
 server.use(morgan('dev'));
 server.use((req, res, next) => {
   res.header('Access-Control', 'https://pokemon-40d1c.web.app'); // update to match the domain you will make the request from
-  res.header('Access-Control-Allow-Credentials', 'false');
+  res.header('Access-Control-Allow-Credentials', 'true');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
   next();
