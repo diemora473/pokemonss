@@ -17,6 +17,7 @@ const corsOptions = {
 router.get('/api', cors(corsOptions), async (req, res, next) => {
     try {
         const result = await getPokemonsApi()
+        res.json({ msg: 'This is CORS-enabled for only example.com.' })
         return res.status(200).json(result)
     } catch (err) {
         next(err)
