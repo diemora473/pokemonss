@@ -9,8 +9,7 @@ const cors = require('cors')
 require('./db.js');
 
 const server = express();
-server.use(cors())
-const port = process.env.PORT || 3001 || 'https://git.heroku.com/pokemonjs-new.git';
+const port = process.env.PORT || 3001
 
 
 server.name = 'API';
