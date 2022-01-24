@@ -41,7 +41,7 @@ const addTypeToDb = async () => {
 
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
-  server.listen(process.env.PORT, () => {
+  server.listen(3001, () => {
     console.log('funcionando'); // eslint-disable-line no-console
   });
 });
