@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx nodemon app.js",
+    "lint": "eslint .",
     "test": "mocha -w ./tests/**/*.spec.js"
   },
   "author": "Henry",
@@ -24,11 +25,14 @@
     "ioredis": "^4.19.2",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
+    "node": "^12.22.1",
+    "nvs": "^0.5.0",
     "pg": "^8.5.1",
     "sequelize": "^6.3.5"
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "eslint": "^7.32.0",
     "mocha": "^9.1.4",
     "nodemon": "^2.0.15",
     "supertest": "^6.0.1",
