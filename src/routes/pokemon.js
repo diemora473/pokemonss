@@ -8,7 +8,7 @@ const getAllPk = require('../controllers/getPkAll')
 const createPokemon = require('../controllers/createPokemon')
 const cors = require('cors')
 
-router.use(cors())
+router.get(cors())
 
 
 //GET POKEMONS FROM API
