@@ -9,7 +9,6 @@ const createPokemon = require('../controllers/createPokemon')
 const app = express()
 const cors = require('cors')
 
-app.use(cors())
 
 
 //GET POKEMONS FROM API
