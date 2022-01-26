@@ -19,7 +19,7 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const { Type } = require('./src/db')
+const { type } = require('./src/db')
 const axios = require('axios')
 // Syncing all the models at once.
 
@@ -32,7 +32,7 @@ const addTypeToDb = async () => {
     const typesNames = typeFromApi.data.results
     // console.log(typesNames)
     typesNames.map(e => {
-      Type.create({ name: e.name })
+      type.create({ name: e.name })
     })
   } catch (err) {
     console.error(err)
