@@ -26,11 +26,8 @@ const axios = require('axios')
 //AGREGO TODOS LOS TIPOS DE LA API A LA DATABASE
 const addTypeToDb = async () => {
   try {
-    // console.log('entra')
     const typeFromApi = await axios.get('https://pokeapi.co/api/v2/type')
-    // console.log(typeFromApi)
     const typesNames = typeFromApi.data.results
-    // console.log(typesNames)
     typesNames.map(e => {
       type.create({ name: e.name })
     })
