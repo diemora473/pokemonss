@@ -6,8 +6,6 @@ const getPokemonsApi = require('../controllers/getPokemonApi')
 const getPokemonDb = require('../controllers/getPokemonDb');
 const getAllPk = require('../controllers/getPkAll')
 const createPokemon = require('../controllers/createPokemon')
-const app = express()
-const cors = require('cors')
 
 
 
