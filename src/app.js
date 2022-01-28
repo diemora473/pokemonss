@@ -11,7 +11,8 @@ require('./db.js');
 
 const server = express();
 server.use(cors())
-const port = process.env.PORT || 3001
+const { PORT } = process.env;
+server.listen(PORT, () => console.log(`Listen on port ${PORT}`));
 
 
 server.name = 'API';
