@@ -14,7 +14,6 @@ const getPokemonDb = async () => {
                 height: p.height,
                 weight: p.weight,
                 pkHp: p.hp,
-                contexto: p.contexto,
                 pkAttack: p.attack,
                 pkDefense: p.defense,
                 pkSpeed: p.speed,

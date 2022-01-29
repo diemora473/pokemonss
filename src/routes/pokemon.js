@@ -62,8 +62,8 @@ router.get('/:id', async (req, res, next) => {
 //POST CREATED POKEMONS BY BODY
 router.post('/', async (req, res, next) => {
     try {
-        const { name, height, weight, pkHp, pkAttack, pkDefense, pkSpeed, pkImg, type, contexto } = req.body;
-        const respose = await createPokemon(name, height, weight, pkHp, pkAttack, pkDefense, pkSpeed, pkImg, type, contexto)
+        const { name, height, weight, pkHp, pkAttack, pkDefense, pkSpeed, pkImg, type } = req.body;
+        const respose = await createPokemon(name, height, weight, pkHp, pkAttack, pkDefense, pkSpeed, pkImg, type,)
         res.send(respose)
     } catch (err) {
         next(err)
