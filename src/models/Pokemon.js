@@ -32,6 +32,9 @@ module.exports = (sequelize) => {
     weight: {
       type: DataTypes.STRING
     },
+    contexto: {
+      type: DataTypes.TEXT,
+    },
     img: {
       type: DataTypes.TEXT
     },
